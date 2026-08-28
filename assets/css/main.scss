@@ -1,0 +1,27 @@
+    ---
+    ---
+
+    @import "minimal-mistakes";
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
+
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      color: #E63946; /* Rojo Applaudo */
+    }
+
+    code, pre {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    a {
+      color: #E63946;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
