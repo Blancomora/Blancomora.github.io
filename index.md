@@ -1,6 +1,20 @@
+# Angelica Blanco Mora
+
+## About Me
+
+Data Analyst with **5+ years of experience** building automated data pipelines, scalable models, and self-service BI to solve complex business problems. 
+
+I specialize in turning manual, fragile processes into automated, scalable systems using **SQL, Power BI, Power Automate, Python, and PySpark**. My work focuses on data engineering, migration, anomaly detection, and enabling teams to make faster decisions with clean, accessible data.
+
+Below are 3 key projects where I delivered measurable impact in automation, ETL, and large-scale business logic — skills directly applicable to Fraud Detection, Bot Detection, and Cloud Security at scale.
+
+**Core Skills**: Python, SQL, PySpark, Power BI, Power Automate, Alteryx, ETL, Data Modeling, Anomaly Detection, Data Migration
+
+---
+
 ## Key Achievements {#key-achievements}
 
-Quick links: [Moody's Data Analyst](#moodys-analyst) | [Moody's Intern](#moodys-intern) | [Delbridge](#delbridge)
+**Jump to:** [Moody's Data Analyst](#moodys-analyst) | [Moody's Intern](#moodys-intern) | [Delbridge](#delbridge)
 
 ---
 
