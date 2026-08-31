@@ -32,14 +32,4 @@ I specialize in turning manual, fragile processes into automated, scalable syste
 - **Situation**: Manual ETL process in Alteryx with no API available
 - **Task**: Streamline data transformation and reporting workflow
 - **Action**: Migrated to **SQL Dataflows in Power BI Service** and documented **Power BI best practices**
-- **Result**: **Decreased data transformation effort by 60%** and left behind IP: a Power BI best practices guide
-
----
-
-### Delbridge - Analyst
-
-#### Key Achievement: Custom Workforce Model for Canada
-- **Situation**: No standardized system to calculate employee benefits across 10 Canadian provinces
-- **Task**: Design a scalable model for HR/Compensation
-- **Action**: Designed a **custom workforce model** with business logic for taxes and benefits
-- **Result**: **Reduced labor cost projection time** and delivered tool adopted by HR team
+- **Result**: **Decreased data transformation effort by 60%** and left behind IP: a
