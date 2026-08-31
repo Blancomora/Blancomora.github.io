@@ -18,13 +18,13 @@ Quick links: [Moody's Data Analyst](#moodys-analyst) | [Moody's Intern](#moodys-
 
 ### Moody's - Data Analyst Intern {#moodys-intern}
 
-#### Key Achievement: ETL Process Migration
+#### Key Achievement: ETL Process Migration + Power BI IP
 - **Situation**: Manual ETL process in Alteryx with no API available to connect SQL → Alteryx → Tableau, causing bottlenecks
 - **Task**: Streamline data transformation and reporting workflow for leadership
-- **Action**: Migrated the entire process to **SQL Dataflows in Power BI Service** and rebuilt the report in Power BI to match Tableau with 99% fidelity
-- **Result**: **Decreased data transformation effort by 60%**, eliminated API dependency, and delivered final dashboard to executive leadership
+- **Action**: Migrated the entire process to **SQL Dataflows in Power BI Service** and rebuilt the report in Power BI to match Tableau with 99% fidelity. **Documented and delivered Power BI best practices** for data modeling, DAX, and report design
+- **Result**: **Decreased data transformation effort by 60%**, eliminated API dependency, and **left behind intellectual property**: a Power BI best practices guide adopted by the team for future reports
 
-*Tech used: SQL, SQL Dataflows, Power BI Service, Alteryx, Tableau*
+*Tech used: SQL, SQL Dataflows, Power BI Service, Alteryx, Tableau, DAX, Data Modeling*
 
 ---
 
