@@ -1,35 +1,29 @@
-# Angelica Blanco Mora
+<style>
+body {
+  background: url('assets/bg-city.jpg') no-repeat center fixed;
+  background-size: cover;
+  margin: 0;
+  font-family: system-ui;
+  color: white;
+}
+.content {
+  background: rgba(0,0,0,0.6); /* para que se lea el texto */
+  padding: 40px;
+  min-height: 100vh;
+}
+h1, h2, h3 { 
+  color: #00f0ff; 
+  text-shadow: 0 0 10px #00f0ff; /* efecto neón */
+}
+</style>
 
-## About Me
+<div class="content">
 
-Data Analyst with **5+ years of experience** building automated data pipelines, scalable models, and self-service BI to solve complex business problems. 
+# Hola, soy Angelica ✨
 
-I specialize in turning manual, fragile processes into automated, scalable systems using **SQL, Power BI, Power Automate, Python, and PySpark**.
+Bienvenida a mi página
 
-**Core Skills**: Python, SQL, PySpark, Power BI, Power Automate, Alteryx, ETL, Data Modeling, Anomaly Detection, Data Migration
+## Sobre mí
+Aquí va tu texto
 
----
-
-## Key Achievements
-
-**Jump to:** [Moody's Data Analyst](#moodys-data-analyst) | [Moody's Intern](#moodys-data-analyst-intern) | [Delbridge](#delbridge-analyst)
-
----
-
-### Moody's - Data Analyst
-
-#### Key Achievement: Migration Automation with Power Automate + Power Apps
-- **Situation**: Users without OneStream licenses lost access to financial reports during Hyperion to OneStream migration
-- **Task**: Enable data access and create management controls for the Data & Analytics team
-- **Action**: Built a **Power Automate flow + Power Apps** to automatically identify, track, and categorize **300+ files in SharePoint**
-- **Result**: **Reduced file retrieval time by 90%** and enabled delivery of Power BI reports for 300+ files
-
----
-
-### Moody's - Data Analyst Intern
-
-#### Key Achievement: ETL Process Migration + Power BI IP
-- **Situation**: Manual ETL process in Alteryx with no API available
-- **Task**: Streamline data transformation and reporting workflow
-- **Action**: Migrated to **SQL Dataflows in Power BI Service** and documented **Power BI best practices**
-- **Result**: **Decreased data transformation effort by 60%** and left behind IP: a
+</div>
