@@ -5,20 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Angelica Blanco Mora | Data Engineer</title>
   <style>
-    html, body { height: 100%; margin: 0; }
+    html, body { height: 100%; margin: 0; padding: 0; }
+    
+    /* Video Background */
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -1;
+      object-fit: cover;
+    }
+
     body {
-      background: url('assets/bg-city.jpg') no-repeat center fixed;
-      background-size: cover;
       font-family: system-ui, -apple-system, sans-serif;
       color: white;
     }
     .content {
-      background: rgba(0,0,0,0.8);
+      background: rgba(0,0,0,0.75);
       padding: 50px 20px;
       min-height: 100%;
       box-sizing: border-box;
       max-width: 900px;
       margin: 0 auto;
+      position: relative;
+      z-index: 1;
     }
     h1 { 
       color: #00f0ff; 
@@ -47,6 +61,12 @@
   </style>
 </head>
 <body>
+  
+  <!-- Video Background -->
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="assets/bg-city.gif.MP4" type="video/mp4">
+  </video>
+
   <div class="content">
     <h1>Angelica Blanco Mora ✨</h1>
     <p class="subtitle">Data passionate since 2018</p>
