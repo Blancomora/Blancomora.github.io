@@ -1,20 +1,41 @@
-# Angelica Blanco Mora
-**Data Engineer | Estadística | AI Ética**
+## Key Achievements {#key-achievements}
 
-Apasionada por **reducción de dimensionalidad en variables psicométricas** y por construir pipelines que previenen **data inaccuracy issues desde desarrollo**.
+Quick links: [Moody's Data Analyst](#moodys-analyst) | [Moody's Intern](#moodys-intern) | [Delbridge](#delbridge)
 
-Me encantan los problemas **lógicos y ambiguos** donde puedo optimizar y refactorizar código para que cargue 3x más rápido.
+---
 
-## Experiencia
-**Expert System Services Consultant** - Debridge Solutions | 2025 - Presente 
-- Soporte a sistemas expertos y validación de datos
+### Moody's - Data Analyst {#moodys-analyst}
 
-**Analyst** - Moody's | 2022 - 2025
-- Migraciones a Snowflake, optimización de queries
+#### Key Achievement: Migration Automation with Power Automate + Power Apps
+- **Situation**: Users without OneStream licenses lost access to financial reports during Hyperion to OneStream migration
+- **Task**: Enable data access and create management controls for the Data & Analytics team to track migration progress
+- **Action**: Built a **Power Automate flow + Power Apps** to automatically identify, track, and categorize **300+ files in SharePoint**. Implemented governance controls for the Hyperion to OneStream migration
+- **Result**: **Reduced file retrieval time by 90%**, centralized migration tracking, and enabled delivery of Power BI reports for 300+ files to users without OneStream licenses
 
-## Proyectos
-- **Health Co-pilot**: Análisis de datos de salud
-- **Coffee Data Platform**: Pipeline de datos para café
+*Tech used: Power Automate, Power Apps, SharePoint, Power BI*
 
-## Contacto
-[LinkedIn] | [GitHub] | tu@email.com
+---
+
+### Moody's - Data Analyst Intern {#moodys-intern}
+
+#### Key Achievement: ETL Process Migration
+- **Situation**: Manual ETL process in Alteryx with no API available to connect SQL → Alteryx → Tableau, causing bottlenecks
+- **Task**: Streamline data transformation and reporting workflow for leadership
+- **Action**: Migrated the entire process to **SQL Dataflows in Power BI Service** and rebuilt the report in Power BI to match Tableau with 99% fidelity
+- **Result**: **Decreased data transformation effort by 60%**, eliminated API dependency, and delivered final dashboard to executive leadership
+
+*Tech used: SQL, SQL Dataflows, Power BI Service, Alteryx, Tableau*
+
+---
+
+### Delbridge - Analyst {#delbridge}
+
+#### Key Achievement: Custom Workforce Model for Canada
+- **Situation**: No standardized system to calculate employee benefits across 10 Canadian provinces and territories
+- **Task**: Design a scalable model for HR/Compensation to forecast labor costs nationally
+- **Action**: Designed and built a **custom workforce model** with complex business logic for provincial taxes, vacation accruals, and benefits in SQL/Excel
+- **Result**: **Reduced labor cost projection time from X days to Y hours** and delivered a tool adopted by the HR/Compensation team for national forecasting
+
+*Tech used: SQL, Excel, Data Modeling, Business Logic*
+
+---
