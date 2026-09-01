@@ -2,38 +2,113 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Angelica Blanco Mora | Statistician & Data Science</title>
   <style>
-    html, body { height: 100%; margin: 0; padding: 0; }
-    #bg-video { position: fixed; top: 0; left: 0; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: -1; object-fit: cover; }
-    body { font-family: system-ui, -apple-system, sans-serif; color: white; }
-    .lang-toggle { position: fixed; top: 20px; right: 20px; z-index: 10; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3); padding: 8px 16px; border-radius: 20px; color: white; cursor: pointer; font-size: 0.9em; backdrop-filter: blur(10px); }
-    .lang-toggle:hover { background: rgba(255,255,255,0.2); }
-    .content { background: rgba(0,0,0,0.8); padding: 50px 20px; min-height: 100%; box-sizing: border-box; max-width: 900px; margin: 0 auto; position: relative; z-index: 1; }
-    h1 { color: white; font-size: 2.5em; margin-bottom: 5px; text-align: center; font-weight: 600; }
-    h2 { color: white; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 8px; margin-top: 40px; font-weight: 500; }
-    h3 { color: white; font-weight: 500; }
-    .subtitle { font-size: 1.2em; color: rgba(255,255,255,0.8); margin-bottom: 20px; text-align: center; }
-    .bio { font-size: 1em; color: rgba(255,255,255,0.9); margin-bottom: 15px; line-height: 1.6; }
-    .bio strong { color: white; }
-    .logro { background: rgba(255,255,255,0.05); border-left: 2px solid rgba(255,255,255,0.3); padding: 15px; margin: 20px 0; border-radius: 5px; }
-    .logro-destacado { background: rgba(255,255,255,0.12); border-left: 3px solid white; padding: 20px; margin: 25px 0; border-radius: 6px; }
-    .tag { display: inline-block; background: rgba(255,255,255,0.15); padding: 4px 10px; border-radius: 15px; font-size: 0.8em; margin-right: 8px; margin-bottom: 8px; }
-    .fun-fact { font-size: 0.9em; color: rgba(255,255,255,0.7); font-style: italic; }
-    strong { color: white; }
-    .contact { text-align: center; margin-top: 40px; }
-    .contact a { color: white; text-decoration: underline; margin: 0 10px; }
+    html, body { height: 100%; margin: 0; padding: 0; background: #000; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; }
+    
+    #bg-video { 
+      position: fixed; 
+      top: 0; 
+      left: 0; 
+      width: 100%; 
+      height: 100%; 
+      z-index: -1; 
+      object-fit: cover;
+      filter: brightness(0.4) blur(2px); /* dark + blur like screenshot */
+    }
+
+    .lang-toggle { 
+      position: fixed; 
+      top: env(safe-area-inset-top, 15px); 
+      right: 15px; 
+      z-index: 10; 
+      background: rgba(0,0,0,0.6); 
+      border: 1px solid rgba(255,255,255,0.2); 
+      padding: 6px 14px; 
+      border-radius: 20px; 
+      color: white; 
+      cursor: pointer; 
+      font-size: 0.85em; 
+      backdrop-filter: blur(10px); 
+      font-weight: 600;
+    }
+    .lang-toggle:hover { background: rgba(255,255,255,0.15); }
+
+    .content { 
+      background: transparent;
+      padding: 80px 20px 60px 20px; /* top padding for notch + ES button */
+      min-height: 100%; 
+      max-width: 100%; 
+      margin: 0 auto; 
+      position: relative; 
+      z-index: 1; 
+      box-sizing: border-box;
+    }
+
+    h1 { color: white; font-size: 2em; margin-bottom: 5px; text-align: left; font-weight: 700; letter-spacing: -0.5px; }
+    .subtitle { font-size: 1em; color: rgba(255,255,255,0.8); margin-bottom: 25px; text-align: left; line-height: 1.4; }
+    .bio, p { font-size: 0.95em; color: rgba(255,255,255,0.9); margin-bottom: 15px; line-height: 1.6; }
+    strong, b { color: white; font-weight: 600; }
+    
+    h2 { 
+      color: white; 
+      font-size: 1.4em;
+      border-bottom: 1px solid rgba(255,255,255,0.2); 
+      padding-bottom: 8px; 
+      margin-top: 35px; 
+      margin-bottom: 20px;
+      font-weight: 600; 
+    }
+    h3 { color: white; font-weight: 600; margin: 0 0 10px 0; font-size: 1.1em; }
+
+    .logro, .logro-destacado { 
+      background: rgba(0,0,0,0.5); /* glass card effect */
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 18px; 
+      margin: 18px 0; 
+      border-radius: 12px; 
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+    .logro-destacado { 
+      background: rgba(0,0,0,0.6);
+      border-left: 3px solid rgba(255,255,255,0.8);
+    }
+
+    .tag { 
+      display: inline-block; 
+      background: rgba(255,255,255,0.12); 
+      padding: 4px 10px; 
+      border-radius: 15px; 
+      font-size: 0.75em; 
+      margin: 4px 6px 10px 0; 
+      color: rgba(255,255,255,0.9);
+    }
+    .fun-fact { font-size: 0.9em; color: rgba(255,255,255,0.7); font-style: italic; margin-top: 10px; }
+    .contact { text-align: center; margin-top: 40px; padding-bottom: 40px; }
+    .contact a { color: white; text-decoration: none; margin: 0 10px; border-bottom: 1px solid rgba(255,255,255,0.3); }
+    .contact a:hover { border-bottom-color: white; }
+
+    /* Desktop */
+    @media (min-width: 769px) {
+      .content { max-width: 900px; padding: 60px 40px; }
+      h1 { font-size: 2.8em; text-align: center; }
+      .subtitle { text-align: center; font-size: 1.2em; }
+      .bio, p { font-size: 1em; }
+    }
   </style>
 </head>
 <body>
   <button class="lang-toggle" onclick="toggleLanguage()">ES</button>
+  
   <video autoplay muted loop playsinline id="bg-video">
-    <source src="bg-city.gif.MP4" type="video/mp4">
+    <source src="bg-city.mp4" type="video/mp4">
   </video>
+
   <div class="content">
     <h1 data-en="Angelica Blanco Mora" data-es="Angelica Blanco Mora">Angelica Blanco Mora</h1>
-    <p class="subtitle" data-en="Statistician | Data Science | Psychometrics | Ethical AI" data-es="Estadística | Ingeniera de Datos | Psicometría | IA Ética">Statistician | Data Engineer | Psychometrics | Ethical AI</p>
+    <p class="subtitle" data-en="Statistician | Data Science | Psychometrics | Ethical AI" data-es="Estadística | Ingeniera de Datos | Psicometría | IA Ética">Statistician | Data Science | Psychometrics | Ethical AI</p>
     
     <p class="bio" data-en="Passionate about <strong>dimensionality reduction through factor analysis</strong> in psychometric data and building pipelines that prevent <strong>data quality issues at the source</strong>." 
        data-es="Apasionada por la <strong>reducción de dimensionalidad a través de análisis factorial</strong> en datos psicométricos y la construcción de pipelines que previenen <strong>problemas de calidad de datos desde el origen</strong>.">Passionate about <strong>dimensionality reduction through factor analysis</strong> in psychometric data and building pipelines that prevent <strong>data quality issues at the source</strong>.</p>
@@ -76,78 +151,4 @@
     </div>
 
     <div class="logro">
-      <h3>United Nations - MIDEPLAN</h3>
-      <p><b data-en="Key Achievement: Interactive SDG Dashboard" data-es="Logro Clave: Dashboard Interactivo de ODS">Key Achievement: Interactive SDG Dashboard</b></p>
-      <p><b data-en="Action:" data-es="Acción:">Action:</b> <span data-en="Built <b>ETL in Power Query with MySQL connection</b> and developed a <b>multi-page Power BI Dashboard</b>" data-es="Construí <b>ETL en Power Query con conexión MySQL</b> y desarrollé un <b>Dashboard de Power BI multipágina</b>">Built <b>ETL in Power Query with MySQL connection</b> and developed a <b>multi-page Power BI Dashboard</b></span></p>
-      <p><b data-en="Features:" data-es="Características:">Features:</b> <span data-en="Buttons, bookmarks, dropdown filters, custom visuals, and variable normalization for SDG tracking" data-es="Botones, marcadores, filtros desplegables, visuales personalizados y normalización de variables para seguimiento de ODS">Buttons, bookmarks, dropdown filters, custom visuals, and variable normalization for SDG tracking</span></p>
-      <p><b data-en="Result:" data-es="Resultado:">Result:</b> <span data-en="Delivered interactive tool for monitoring Sustainable Development Goals | <b>Professional hours</b>" data-es="Entregué herramienta interactiva para monitoreo de Objetivos de Desarrollo Sostenible | <b>Horas profesionales</b>">Delivered interactive tool for monitoring Sustainable Development Goals | <b>Professional hours</b></span></p>
-    </div>
-
-    <div class="logro">
-      <h3>Agronomy Consulting</h3>
-      <p><b data-en="Key Achievement: Phosphate Fertilizer Experiment Analysis" data-es="Logro Clave: Análisis Experimental de Fertilizantes Fosfatados">Key Achievement: Phosphate Fertilizer Experiment Analysis</b></p>
-      <p><b data-en="Action:" data-es="Acción:">Action:</b> <span data-en="Assisted with <b>phosphate fertilizer formulation</b> and analyzed reactions across different experimental groups" data-es="Asistí en la <b>formulación de fertilizantes fosfatados</b> y analicé reacciones en diferentes grupos experimentales">Assisted with <b>phosphate fertilizer formulation</b> and analyzed reactions across different experimental groups</span></p>
-      <p><b data-en="Result:" data-es="Resultado:">Result:</b> <span data-en="Provided data-driven insights for fertilizer optimization | <b>Professional hours</b>" data-es="Brindé insights basados en datos para optimización de fertilizantes | <b>Horas profesionales</b>">Provided data-driven insights for fertilizer optimization | <b>Professional hours</b></span></p>
-    </div>
-
-    <h2 data-en="Academic & Research Projects" data-es="Proyectos Académicos & Investigación">Academic & Research Projects</h2>
-
-    <div class="logro">
-      <h3 data-en="School of Statistics - Quasi-Experimental Design" data-es="Escuela de Estadística - Diseño Cuasi-Experimental">School of Statistics - Quasi-Experimental Design</h3>
-      <p><b data-en="Project:" data-es="Proyecto:">Project:</b> <span data-en="Measuring <strong>working memory, short-term memory, and attention</strong>" data-es="Medición de <strong>memoria de trabajo, memoria a corto plazo y atención</strong>">Measuring <strong>working memory, short-term memory, and attention</strong></span></p>
-      <p><b data-en="Design Variables:" data-es="Variables de Diseño:">Design Variables:</b> <span data-en="Music noise levels, time of day when test was conducted" data-es="Niveles de ruido musical, hora del día en que se realizó la prueba">Music noise levels, time of day when test was conducted</span></p>
-      <p><b data-en="Result:" data-es="Resultado:">Result:</b> <span data-en="Designed and implemented a quasi-experimental study to analyze cognitive performance under different conditions" data-es="Diseñé e implementé un estudio cuasi-experimental para analizar el rendimiento cognitivo bajo diferentes condiciones">Designed and implemented a quasi-experimental study to analyze cognitive performance under different conditions</span></p>
-    </div>
-
-    <div class="logro">
-      <h3 data-en="School of Statistics - Big Five Research" data-es="Escuela de Estadística - Investigación Big Five">School of Statistics - Big Five Research</h3>
-      <p><b data-en="Project:" data-es="Proyecto:">Project:</b> <span data-en="Correlation analysis between <strong>Big Five personality traits, logical reasoning, admission score, and GPA</strong>" data-es="Análisis de correlación entre <strong>rasgos de personalidad Big Five, razonamiento lógico, nota de admisión y GPA</strong>">Correlation analysis between <strong>Big Five personality traits, logical reasoning, admission score, and GPA</strong></span></p>
-      <p><b data-en="Variables:" data-es="Variables:">Variables:</b> <span data-en="Anxiety, fear of negative evaluation, health factors like exercise, and wellbeing factors like stable employment" data-es="Ansiedad, miedo a la evaluación negativa, factores de salud como ejercicio y factores de bienestar como empleo estable">Anxiety, fear of negative evaluation, health factors like exercise, and wellbeing factors like stable employment</span></p>
-      <p><b data-en="Result:" data-es="Resultado:">Result:</b> <span data-en="Built statistical models to understand predictors of academic performance and wellbeing" data-es="Construí modelos estadísticos para entender predictores de rendimiento académico y bienestar">Built statistical models to understand predictors of academic performance and wellbeing</span></p>
-    </div>
-
-    <h2 data-en="Featured Project: Graduation & Professional Practice" data-es="Proyecto Destacado: Graduación & Práctica Profesional">Featured Project: Graduation & Professional Practice</h2>
-
-    <div class="logro-destacado">
-      <h3>SINEM - National System of Music Education</h3>
-      <div>
-        <span class="tag" data-en="Graduation Project" data-es="Proyecto de Graduación">Graduation Project</span>
-        <span class="tag" data-en="Professional Practice in Statistics" data-es="Práctica Profesional en Estadística">Professional Practice in Statistics</span>
-        <span class="tag" data-en="Psychometrics" data-es="Psicometría">Psychometrics</span>
-      </div>
-      
-      <p><b data-en="Key Achievement 1: Psychometric Data Pipeline with Python" data-es="Logro Clave 1: Pipeline de Datos Psicométricos con Python">Key Achievement 1: Psychometric Data Pipeline with Python</b></p>
-      <p><b data-en="Action:" data-es="Acción:">Action:</b> <span data-en="Used <b>Python to normalize student lists</b> and conducted a <b>census to obtain exact student counts</b> per school. Collected informed consent and applied questionnaires to measure <b>satisfaction, procrastination, and motivation</b>" data-es="Usé <b>Python para normalizar listas de estudiantes</b> y realicé un <b>censo para obtener el conteo exacto de estudiantes</b> por escuela. Recolecté consentimientos informados y apliqué cuestionarios para medir <b>satisfacción, procrastinación y motivación</b>">Used <b>Python to normalize student lists</b> and conducted a <b>census to obtain exact student counts</b> per school. Collected informed consent and applied questionnaires to measure <b>satisfaction, procrastination, and motivation</b></span></p>
-      <p><b data-en="Analysis:" data-es="Análisis:">Analysis:</b> <span data-en="Performed <b>Exploratory Factor Analysis</b> and <b>Confirmatory Factor Analysis</b>. Built a <b>linear regression model</b> using created indices to <b>predict student satisfaction</b>" data-es="Realicé <b>Análisis Factorial Exploratorio</b> y <b>Análisis Factorial Confirmatorio</b>. Construí un <b>modelo de regresión lineal</b> usando índices creados para <b>predecir la satisfacción estudiantil</b>">Performed <b>Exploratory Factor Analysis</b> and <b>Confirmatory Factor Analysis</b>. Built a <b>linear regression model</b> using created indices to <b>predict student satisfaction</b></span></p>
-      
-      <p><b data-en="Key Achievement 2: Automated PDF Report Generation" data-es="Logro Clave 2: Generación Automatizada de Reportes PDF">Key Achievement 2: Automated PDF Report Generation</b></p>
-      <p><b data-en="Action:" data-es="Acción:">Action:</b> <span data-en="Developed an <b>automated pipeline to generate PDF lists for each school</b> including student and parent/guardian information" data-es="Desarrollé un <b>pipeline automatizado para generar listas en PDF por cada escuela</b> incluyendo información de estudiante y padre/madre de familia">Developed an <b>automated pipeline to generate PDF lists for each school</b> including student and parent/guardian information</span></p>
-      <p><b data-en="Result:" data-es="Resultado:">Result:</b> <span data-en="Streamlined administrative reporting and provided clean, accessible data for school management" data-es="Estandaricé los reportes administrativos y brindé datos limpios y accesibles para la gestión escolar">Streamlined administrative reporting and provided clean, accessible data for school management</span></p>
-      
-      <p class="fun-fact"><b data-en="Fun fact:" data-es="Dato curioso:">Fun fact:</b> <span data-en="Played classical guitar at SINEM 🎸" data-es="Tocaba guitarra clásica en SINEM 🎸">Played classical guitar at SINEM 🎸</span></p>
-    </div>
-
-    <div class="contact">
-      <p data-en="Let's connect" data-es="Conectemos">Let's connect</p>
-      <a href="mailto:tuemail@gmail.com">Email</a> | 
-      <a href="https://linkedin.com/in/tulinkedin" target="_blank">LinkedIn</a> | 
-      <a href="https://github.com/tugithub" target="_blank">GitHub</a>
-    </div>
-
-  </div>
-
-  <script>
-    let currentLang = 'en';
-    function toggleLanguage() {
-      currentLang = currentLang === 'en' ? 'es' : 'en';
-      document.querySelectorAll('[data-en]').forEach(el => {
-        el.innerHTML = el.getAttribute(`data-${currentLang}`);
-      });
-      document.querySelector('.lang-toggle').innerText = currentLang === 'en' ? 'ES' : 'EN';
-      document.documentElement.lang = currentLang;
-    }
-    const video = document.getElementById('bg-video');
-    video.addEventListener('ended', function() { this.currentTime = 0; this.play(); });
-  </script>
-</body>
-</html>
+      <h
