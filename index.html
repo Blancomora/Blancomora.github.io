@@ -25,7 +25,7 @@
       color: white;
     }
     .content {
-      background: rgba(0,0,0,0.8);
+      background: rgba(0,0,0,0.75);
       padding: 50px 20px;
       min-height: 100%;
       box-sizing: border-box;
@@ -35,73 +35,46 @@
       z-index: 1;
     }
     h1 { 
-      color: white; 
+      color: #00f0ff; 
+      text-shadow: 0 0 15px #00f0ff;
       font-size: 2.5em;
       margin-bottom: 5px;
       text-align: center;
-      font-weight: 600;
     }
     h2 { 
-      color: white; 
-      border-bottom: 1px solid rgba(255,255,255,0.3);
-      padding-bottom: 8px;
+      color: #00f0ff; 
+      text-shadow: 0 0 10px #00f0ff;
+      border-bottom: 2px solid #00f0ff;
+      padding-bottom: 5px;
       margin-top: 40px;
-      font-weight: 500;
     }
-    h3 { color: white; font-weight: 500; }
-    .subtitle { font-size: 1.2em; color: rgba(255,255,255,0.8); margin-bottom: 20px; text-align: center; }
-    .bio { font-size: 1em; color: rgba(255,255,255,0.9); margin-bottom: 15px; line-height: 1.6; }
-    .bio strong { color: white; }
+    h3 { color: #00f0ff; }
+    .subtitle { font-size: 1.2em; color: #ccc; margin-bottom: 30px; text-align: center; }
     .logro {
-      background: rgba(255,255,255,0.05);
-      border-left: 2px solid rgba(255,255,255,0.3);
+      background: rgba(0,240,255,0.1);
+      border-left: 3px solid #00f0ff;
       padding: 15px;
       margin: 20px 0;
       border-radius: 5px;
     }
-    .logro-destacado {
-      background: rgba(255,255,255,0.12);
-      border-left: 3px solid white;
-      padding: 20px;
-      margin: 25px 0;
-      border-radius: 6px;
-    }
-    .tag {
-      display: inline-block;
-      background: rgba(255,255,255,0.15);
-      padding: 4px 10px;
-      border-radius: 15px;
-      font-size: 0.8em;
-      margin-right: 8px;
-      margin-bottom: 8px;
-    }
-    .fun-fact {
-      font-size: 0.9em;
-      color: rgba(255,255,255,0.7);
-      font-style: italic;
-    }
-    strong { color: white; }
+    strong { color: #00f0ff; }
   </style>
 </head>
 <body>
   
   <!-- Video Background -->
   <video autoplay muted loop playsinline id="bg-video">
-    <source src="bg-city.gif.MP4" type="video/mp4">
+    <source src="assets/bg-city.gif.MP4" type="video/mp4">
   </video>
 
   <div class="content">
-    <h1>Angelica Blanco Mora</h1>
-    <p class="subtitle">Data Engineer | Statistics | Psychometrics | Ethical AI</p>
-    
-    <p class="bio">Passionate about <strong>dimensionality reduction in psychometric variables</strong> and building pipelines that prevent <strong>data inaccuracy issues from development</strong>.</p>
-    <p class="bio">I love <strong>logical and ambiguous problems</strong> where I can optimize and refactor code to make it load 3x faster.</p>
-
+    <h1>Angelica Blanco Mora ✨</h1>
+    <p class="subtitle">Data passionate since 2018</p>
     <p>Data Analyst with <strong>5+ years of experience</strong> building automated data pipelines, scalable models, and self-service BI to solve complex business problems.</p>
     <p>I specialize in turning manual, fragile processes into automated, scalable systems using <strong>SQL, Power BI, Power Automate, Python, and PySpark</strong>.</p>
-    <p><b>Core Skills:</b> Python, SQL, PySpark, Power BI, Power Automate, Alteryx, ETL, Data Modeling, Anomaly Detection, Psychometrics, Experimental Design, Factor Analysis, Statistical Modeling, Report Automation</p>
+    <p><b>Core Skills:</b> Python, SQL, PySpark, Power BI, Power Automate, Alteryx, ETL, Data Modeling, Anomaly Detection, Data Migration</p>
 
-    <h2>Key Work Experience Achievements</h2>
+    <h2>Key Achievements</h2>
 
     <div class="logro">
       <h3>Moody's - Data Analyst</h3>
@@ -120,75 +93,13 @@
     </div>
 
     <div class="logro">
-      <h3>Delbridge - Expert System Services Consultant</h3>
+      <h3>Delbridge - Analyst</h3>
       <p><b>Key Achievement: Custom Workforce Model for Canada</b></p>
       <p><b>Situation:</b> No standardized system to calculate employee benefits across 10 Canadian provinces</p>
       <p><b>Action:</b> Designed a <b>custom workforce model</b> with business logic for taxes and benefits</p>
       <p><b>Result:</b> <b>Reduced labor cost projection time</b> and delivered tool adopted by HR team</p>
     </div>
 
-    <div class="logro">
-      <h3>United Nations - MIDEPLAN</h3>
-      <p><b>Key Achievement: Interactive SDG Dashboard</b></p>
-      <p><b>Action:</b> Built <b>ETL in Power Query with MySQL connection</b> and developed a <b>multi-page Power BI Dashboard</b></p>
-      <p><b>Features:</b> Buttons, bookmarks, dropdown filters, custom visuals, and variable normalization for SDG tracking</p>
-      <p><b>Result:</b> Delivered interactive tool for monitoring Sustainable Development Goals | <b>Professional hours</b></p>
-    </div>
-
-    <div class="logro">
-      <h3>Agronomy Consulting</h3>
-      <p><b>Key Achievement: Phosphate Fertilizer Experiment Analysis</b></p>
-      <p><b>Action:</b> Assisted with <b>phosphate fertilizer formulation</b> and analyzed reactions across different experimental groups</p>
-      <p><b>Result:</b> Provided data-driven insights for fertilizer optimization | <b>Professional hours</b></p>
-    </div>
-
-    <h2>Academic & Research Projects</h2>
-
-    <div class="logro">
-      <h3>School of Statistics - Quasi-Experimental Design</h3>
-      <p><b>Project:</b> Measuring <strong>working memory, short-term memory, and attention</strong></p>
-      <p><b>Design Variables:</b> Music noise levels, time of day when test was conducted</p>
-      <p><b>Result:</b> Designed and implemented a quasi-experimental study to analyze cognitive performance under different conditions</p>
-    </div>
-
-    <div class="logro">
-      <h3>School of Statistics - Big Five Research</h3>
-      <p><b>Project:</b> Correlation analysis between <strong>Big Five personality traits, logical reasoning, admission score, and GPA</strong></p>
-      <p><b>Variables:</b> Anxiety, fear of negative evaluation, health factors like exercise, and wellbeing factors like stable employment</p>
-      <p><b>Result:</b> Built statistical models to understand predictors of academic performance and wellbeing</p>
-    </div>
-
-    <h2>Featured Project: Graduation & Professional Practice</h2>
-
-    <div class="logro-destacado">
-      <h3>SINEM - National System of Music Education</h3>
-      <div>
-        <span class="tag">Graduation Project</span>
-        <span class="tag">Professional Practice in Statistics</span>
-        <span class="tag">Psychometrics</span>
-      </div>
-      
-      <p><b>Key Achievement 1: Psychometric Data Pipeline with Python</b></p>
-      <p><b>Action:</b> Used <b>Python to normalize student lists</b> and conducted a <b>census to obtain exact student counts</b> per school. Collected informed consent and applied questionnaires to measure <b>satisfaction, procrastination, and motivation</b></p>
-      <p><b>Analysis:</b> Performed <b>Exploratory Factor Analysis</b> and <b>Confirmatory Factor Analysis</b>. Built a <b>linear regression model</b> using created indices to <b>predict student satisfaction</b></p>
-      
-      <p><b>Key Achievement 2: Automated PDF Report Generation</b></p>
-      <p><b>Action:</b> Developed an <b>automated pipeline to generate PDF lists for each school</b> including student and parent/guardian information</p>
-      <p><b>Result:</b> Streamlined administrative reporting and provided clean, accessible data for school management</p>
-      
-      <p class="fun-fact"><b>Fun fact:</b> Played classical guitar at SINEM 🎸</p>
-    </div>
-
   </div>
-
-  <!-- Force video to loop -->
-  <script>
-    const video = document.getElementById('bg-video');
-    video.addEventListener('ended', function() {
-      this.currentTime = 0;
-      this.play();
-    });
-  </script>
-
 </body>
 </html>
