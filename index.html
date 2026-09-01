@@ -24,8 +24,25 @@
       font-family: system-ui, -apple-system, sans-serif;
       color: white;
     }
+    .lang-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 10;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.3);
+      padding: 8px 16px;
+      border-radius: 20px;
+      color: white;
+      cursor: pointer;
+      font-size: 0.9em;
+      backdrop-filter: blur(10px);
+    }
+    .lang-toggle:hover {
+      background: rgba(255,255,255,0.2);
+    }
     .content {
-      background: rgba(0,0,0,0.75);
+      background: rgba(0,0,0,0.8);
       padding: 50px 20px;
       min-height: 100%;
       box-sizing: border-box;
@@ -35,71 +52,179 @@
       z-index: 1;
     }
     h1 { 
-      color: #00f0ff; 
-      text-shadow: 0 0 15px #00f0ff;
+      color: white; 
       font-size: 2.5em;
       margin-bottom: 5px;
       text-align: center;
+      font-weight: 600;
     }
     h2 { 
-      color: #00f0ff; 
-      text-shadow: 0 0 10px #00f0ff;
-      border-bottom: 2px solid #00f0ff;
-      padding-bottom: 5px;
+      color: white; 
+      border-bottom: 1px solid rgba(255,255,255,0.3);
+      padding-bottom: 8px;
       margin-top: 40px;
+      font-weight: 500;
     }
-    h3 { color: #00f0ff; }
-    .subtitle { font-size: 1.2em; color: #ccc; margin-bottom: 30px; text-align: center; }
+    h3 { color: white; font-weight: 500; }
+    .subtitle { font-size: 1.2em; color: rgba(255,255,255,0.8); margin-bottom: 20px; text-align: center; }
+    .bio { font-size: 1em; color: rgba(255,255,255,0.9); margin-bottom: 15px; line-height: 1.6; }
+    .bio strong { color: white; }
     .logro {
-      background: rgba(0,240,255,0.1);
-      border-left: 3px solid #00f0ff;
+      background: rgba(255,255,255,0.05);
+      border-left: 2px solid rgba(255,255,255,0.3);
       padding: 15px;
       margin: 20px 0;
       border-radius: 5px;
     }
-    strong { color: #00f0ff; }
+    .logro-destacado {
+      background: rgba(255,255,255,0.12);
+      border-left: 3px solid white;
+      padding: 20px;
+      margin: 25px 0;
+      border-radius: 6px;
+    }
+    .tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      padding: 4px 10px;
+      border-radius: 15px;
+      font-size: 0.8em;
+      margin-right: 8px;
+      margin-bottom: 8px;
+    }
+    .fun-fact {
+      font-size: 0.9em;
+      color: rgba(255,255,255,0.7);
+      font-style: italic;
+    }
+    strong { color: white; }
   </style>
 </head>
 <body>
   
+  <button class="lang-toggle" onclick="toggleLanguage()">ES</button>
+
   <!-- Video Background -->
   <video autoplay muted loop playsinline id="bg-video">
-    <source src="assets/bg-city.gif.MP4" type="video/mp4">
+    <source src="bg-city.gif.MP4" type="video/mp4">
   </video>
 
   <div class="content">
-    <h1>Angelica Blanco Mora ✨</h1>
-    <p class="subtitle">Data passionate since 2018</p>
-    <p>Data Analyst with <strong>5+ years of experience</strong> building automated data pipelines, scalable models, and self-service BI to solve complex business problems.</p>
-    <p>I specialize in turning manual, fragile processes into automated, scalable systems using <strong>SQL, Power BI, Power Automate, Python, and PySpark</strong>.</p>
-    <p><b>Core Skills:</b> Python, SQL, PySpark, Power BI, Power Automate, Alteryx, ETL, Data Modeling, Anomaly Detection, Data Migration</p>
+    <h1 data-en="Angelica Blanco Mora" data-es="Angelica Blanco Mora">Angelica Blanco Mora</h1>
+    <p class="subtitle" data-en="Data Engineer | Statistics | Psychometrics | Ethical AI" data-es="Ingeniera de Datos | Estadística | Psicometría | IA Ética">Data Engineer | Statistics | Psychometrics | Ethical AI</p>
+    
+    <p class="bio" data-en="Passionate about <strong>dimensionality reduction in psychometric variables</strong> and building pipelines that prevent <strong>data inaccuracy issues from development</strong>." 
+       data-es="Apasionada por la <strong>reducción de dimensionalidad en variables psicométricas</strong> y la construcción de pipelines que previenen <strong>problemas de inexactitud de datos desde el desarrollo</strong>.">Passionate about <strong>dimensionality reduction in psychometric variables</strong> and building pipelines that prevent <strong>data inaccuracy issues from development</strong>.</p>
+    
+    <p class="bio" data-en="I love <strong>logical and ambiguous problems</strong> where I can optimize and refactor code to make it load 3x faster."
+       data-es="Me encantan los <strong>problemas lógicos y ambiguos</strong> donde puedo optimizar y refactorizar código para que cargue 3 veces más rápido.">I love <strong>logical and ambiguous problems</strong> where I can optimize and refactor code to make it load 3x faster.</p>
 
-    <h2>Key Achievements</h2>
+    <p data-en="Data Analyst with <strong>5+ years of experience</strong> building automated data pipelines, scalable models, and self-service BI to solve complex business problems."
+       data-es="Analista de Datos con <strong>más de 5 años de experiencia</strong> construyendo pipelines de datos automatizados, modelos escalables y BI de autoservicio para resolver problemas de negocio complejos.">Data Analyst with <strong>5+ years of experience</strong> building automated data pipelines, scalable models, and self-service BI to solve complex business problems.</p>
+    
+    <p data-en="I specialize in turning manual, fragile processes into automated, scalable systems using <strong>SQL, Power BI, Power Automate, Python, and PySpark</strong>."
+       data-es="Me especializo en transformar procesos manuales y frágiles en sistemas automatizados y escalables usando <strong>SQL, Power BI, Power Automate, Python y PySpark</strong>.">I specialize in turning manual, fragile processes into automated, scalable systems using <strong>SQL, Power BI, Power Automate, Python, and PySpark</strong>.</p>
+    
+    <p><b data-en="Core Skills:" data-es="Habilidades Clave:">Core Skills:</b> Python, SQL, PySpark, Power BI, Power Automate, Alteryx, ETL, Data Modeling, Anomaly Detection, Psychometrics, Experimental Design, Factor Analysis, Statistical Modeling, Report Automation</p>
+
+    <h2 data-en="Key Work Experience Achievements" data-es="Logros de Experiencia Profesional">Key Work Experience Achievements</h2>
 
     <div class="logro">
       <h3>Moody's - Data Analyst</h3>
-      <p><b>Key Achievement: Migration Automation with Power Automate + Power Apps</b></p>
-      <p><b>Situation:</b> Users without OneStream licenses lost access to financial reports during Hyperion to OneStream migration</p>
-      <p><b>Action:</b> Built a <b>Power Automate flow + Power Apps</b> to automatically identify, track, and categorize <b>300+ files in SharePoint</b></p>
-      <p><b>Result:</b> <b>Reduced file retrieval time by 90%</b> and enabled delivery of Power BI reports for 300+ files</p>
+      <p><b data-en="Key Achievement: Migration Automation with Power Automate + Power Apps" data-es="Logro Clave: Automatización de Migración con Power Automate + Power Apps">Key Achievement: Migration Automation with Power Automate + Power Apps</b></p>
+      <p><b data-en="Situation:" data-es="Situación:">Situation:</b> <span data-en="Users without OneStream licenses lost access to financial reports during Hyperion to OneStream migration" data-es="Usuarios sin licencias de OneStream perdieron acceso a reportes financieros durante la migración de Hyperion a OneStream">Users without OneStream licenses lost access to financial reports during Hyperion to OneStream migration</span></p>
+      <p><b data-en="Action:" data-es="Acción:">Action:</b> <span data-en="Built a <b>Power Automate flow + Power Apps</b> to automatically identify, track, and categorize <b>300+ files in SharePoint</b>" data-es="Desarrollé un <b>flujo de Power Automate + Power Apps</b> para identificar, rastrear y categorizar automáticamente <b>más de 300 archivos en SharePoint</b>">Built a <b>Power Automate flow + Power Apps</b> to automatically identify, track, and categorize <b>300+ files in SharePoint</b></span></p>
+      <p><b data-en="Result:" data-es="Resultado:">Result:</b> <span data-en="<b>Reduced file retrieval time by 90%</b> and enabled delivery of Power BI reports for 300+ files" data-es="<b>Reduje el tiempo de recuperación de archivos en 90%</b> y habilité la entrega de reportes de Power BI para más de 300 archivos"><b>Reduced file retrieval time by 90%</b> and enabled delivery of Power BI reports for 300+ files</span></p>
     </div>
 
     <div class="logro">
       <h3>Moody's - Data Analyst Intern</h3>
-      <p><b>Key Achievement: ETL Process Migration + Power BI IP</b></p>
-      <p><b>Situation:</b> Manual ETL process in Alteryx with no API available</p>
-      <p><b>Action:</b> Migrated to <b>SQL Dataflows in Power BI Service</b> and documented <b>Power BI best practices</b></p>
-      <p><b>Result:</b> <b>Decreased data transformation effort by 60%</b> and left behind IP: a Power BI best practices guide</p>
+      <p><b data-en="Key Achievement: ETL Process Migration + Power BI IP" data-es="Logro Clave: Migración de Proceso ETL + IP de Power BI">Key Achievement: ETL Process Migration + Power BI IP</b></p>
+      <p><b data-en="Situation:" data-es="Situación:">Situation:</b> <span data-en="Manual ETL process in Alteryx with no API available" data-es="Proceso ETL manual en Alteryx sin API disponible">Manual ETL process in Alteryx with no API available</span></p>
+      <p><b data-en="Action:" data-es="Acción:">Action:</b> <span data-en="Migrated to <b>SQL Dataflows in Power BI Service</b> and documented <b>Power BI best practices</b>" data-es="Migré a <b>SQL Dataflows en Power BI Service</b> y documenté <b>mejores prácticas de Power BI</b>">Migrated to <b>SQL Dataflows in Power BI Service</b> and documented <b>Power BI best practices</b></span></p>
+      <p><b data-en="Result:" data-es="Resultado:">Result:</b> <span data-en="<b>Decreased data transformation effort by 60%</b> and left behind IP: a Power BI best practices guide" data-es="<b>Reduje el esfuerzo de transformación de datos en 60%</b> y dejé como IP: una guía de mejores prácticas de Power BI"><b>Decreased data transformation effort by 60%</b> and left behind IP: a Power BI best practices guide</span></p>
     </div>
 
     <div class="logro">
-      <h3>Delbridge - Analyst</h3>
-      <p><b>Key Achievement: Custom Workforce Model for Canada</b></p>
-      <p><b>Situation:</b> No standardized system to calculate employee benefits across 10 Canadian provinces</p>
-      <p><b>Action:</b> Designed a <b>custom workforce model</b> with business logic for taxes and benefits</p>
-      <p><b>Result:</b> <b>Reduced labor cost projection time</b> and delivered tool adopted by HR team</p>
+      <h3>Delbridge - Expert System Services Consultant</h3>
+      <p><b data-en="Key Achievement: Custom Workforce Model for Canada" data-es="Logro Clave: Modelo de Fuerza Laboral Personalizado para Canadá">Key Achievement: Custom Workforce Model for Canada</b></p>
+      <p><b data-en="Situation:" data-es="Situación:">Situation:</b> <span data-en="No standardized system to calculate employee benefits across 10 Canadian provinces" data-es="No existía un sistema estandarizado para calcular beneficios de empleados en 10 provincias canadienses">No standardized system to calculate employee benefits across 10 Canadian provinces</span></p>
+      <p><b data-en="Action:" data-es="Acción:">Action:</b> <span data-en="Designed a <b>custom workforce model</b> with business logic for taxes and benefits" data-es="Diseñé un <b>modelo de fuerza laboral personalizado</b> con lógica de negocio para impuestos y beneficios">Designed a <b>custom workforce model</b> with business logic for taxes and benefits</span></p>
+      <p><b data-en="Result:" data-es="Resultado:">Result:</b> <span data-en="<b>Reduced labor cost projection time</b> and delivered tool adopted by HR team" data-es="<b>Reduje el tiempo de proyección de costos laborales</b> y entregué una herramienta adoptada por el equipo de RRHH"><b>Reduced labor cost projection time</b> and delivered tool adopted by HR team</span></p>
+    </div>
+
+    <div class="logro">
+      <h3>United Nations - MIDEPLAN</h3>
+      <p><b data-en="Key Achievement: Interactive SDG Dashboard" data-es="Logro Clave: Dashboard Interactivo de ODS">Key Achievement: Interactive SDG Dashboard</b></p>
+      <p><b data-en="Action:" data-es="Acción:">Action:</b> <span data-en="Built <b>ETL in Power Query with MySQL connection</b> and developed a <b>multi-page Power BI Dashboard</b>" data-es="Construí <b>ETL en Power Query con conexión MySQL</b> y desarrollé un <b>Dashboard de Power BI multipágina</b>">Built <b>ETL in Power Query with MySQL connection</b> and developed a <b>multi-page Power BI Dashboard</b></span></p>
+      <p><b data-en="Features:" data-es="Características:">Features:</b> <span data-en="Buttons, bookmarks, dropdown filters, custom visuals, and variable normalization for SDG tracking" data-es="Botones, marcadores, filtros desplegables, visuales personalizados y normalización de variables para seguimiento de ODS">Buttons, bookmarks, dropdown filters, custom visuals, and variable normalization for SDG tracking</span></p>
+      <p><b data-en="Result:" data-es="Resultado:">Result:</b> <span data-en="Delivered interactive tool for monitoring Sustainable Development Goals | <b>Professional hours</b>" data-es="Entregué herramienta interactiva para monitoreo de Objetivos de Desarrollo Sostenible | <b>Horas profesionales</b>">Delivered interactive tool for monitoring Sustainable Development Goals | <b>Professional hours</b></span></p>
+    </div>
+
+    <div class="logro">
+      <h3>Agronomy Consulting</h3>
+      <p><b data-en="Key Achievement: Phosphate Fertilizer Experiment Analysis" data-es="Logro Clave: Análisis Experimental de Fertilizantes Fosfatados">Key Achievement: Phosphate Fertilizer Experiment Analysis</b></p>
+      <p><b data-en="Action:" data-es="Acción:">Action:</b> <span data-en="Assisted with <b>phosphate fertilizer formulation</b> and analyzed reactions across different experimental groups" data-es="Asistí en la <b>formulación de fertilizantes fosfatados</b> y analicé reacciones en diferentes grupos experimentales">Assisted with <b>phosphate fertilizer formulation</b> and analyzed reactions across different experimental groups</span></p>
+      <p><b data-en="Result:" data-es="Resultado:">Result:</b> <span data-en="Provided data-driven insights for fertilizer optimization | <b>Professional hours</b>" data-es="Brindé insights basados en datos para optimización de fertilizantes | <b>Horas profesionales</b>">Provided data-driven insights for fertilizer optimization | <b>Professional hours</b></span></p>
+    </div>
+
+    <h2 data-en="Academic & Research Projects" data-es="Proyectos Académicos & Investigación">Academic & Research Projects</h2>
+
+    <div class="logro">
+      <h3 data-en="School of Statistics - Quasi-Experimental Design" data-es="Escuela de Estadística - Diseño Cuasi-Experimental">School of Statistics - Quasi-Experimental Design</h3>
+      <p><b data-en="Project:" data-es="Proyecto:">Project:</b> <span data-en="Measuring <strong>working memory, short-term memory, and attention</strong>" data-es="Medición de <strong>memoria de trabajo, memoria a corto plazo y atención</strong>">Measuring <strong>working memory, short-term memory, and attention</strong></span></p>
+      <p><b data-en="Design Variables:" data-es="Variables de Diseño:">Design Variables:</b> <span data-en="Music noise levels, time of day when test was conducted" data-es="Niveles de ruido musical, hora del día en que se realizó la prueba">Music noise levels, time of day when test was conducted</span></p>
+      <p><b data-en="Result:" data-es="Resultado:">Result:</b> <span data-en="Designed and implemented a quasi-experimental study to analyze cognitive performance under different conditions" data-es="Diseñé e implementé un estudio cuasi-experimental para analizar el rendimiento cognitivo bajo diferentes condiciones">Designed and implemented a quasi-experimental study to analyze cognitive performance under different conditions</span></p>
+    </div>
+
+    <div class="logro">
+      <h3 data-en="School of Statistics - Big Five Research" data-es="Escuela de Estadística - Investigación Big Five">School of Statistics - Big Five Research</h3>
+      <p><b data-en="Project:" data-es="Proyecto:">Project:</b> <span data-en="Correlation analysis between <strong>Big Five personality traits, logical reasoning, admission score, and GPA</strong>" data-es="Análisis de correlación entre <strong>rasgos de personalidad Big Five, razonamiento lógico, nota de admisión y GPA</strong>">Correlation analysis between <strong>Big Five personality traits, logical reasoning, admission score, and GPA</strong></span></p>
+      <p><b data-en="Variables:" data-es="Variables:">Variables:</b> <span data-en="Anxiety, fear of negative evaluation, health factors like exercise, and wellbeing factors like stable employment" data-es="Ansiedad, miedo a la evaluación negativa, factores de salud como ejercicio y factores de bienestar como empleo estable">Anxiety, fear of negative evaluation, health factors like exercise, and wellbeing factors like stable employment</span></p>
+      <p><b data-en="Result:" data-es="Resultado:">Result:</b> <span data-en="Built statistical models to understand predictors of academic performance and wellbeing" data-es="Construí modelos estadísticos para entender predictores de rendimiento académico y bienestar">Built statistical models to understand predictors of academic performance and wellbeing</span></p>
+    </div>
+
+    <h2 data-en="Featured Project: Graduation & Professional Practice" data-es="Proyecto Destacado: Graduación & Práctica Profesional">Featured Project: Graduation & Professional Practice</h2>
+
+    <div class="logro-destacado">
+      <h3>SINEM - National System of Music Education</h3>
+      <div>
+        <span class="tag" data-en="Graduation Project" data-es="Proyecto de Graduación">Graduation Project</span>
+        <span class="tag" data-en="Professional Practice in Statistics" data-es="Práctica Profesional en Estadística">Professional Practice in Statistics</span>
+        <span class="tag" data-en="Psychometrics" data-es="Psicometría">Psychometrics</span>
+      </div>
+      
+      <p><b data-en="Key Achievement 1: Psychometric Data Pipeline with Python" data-es="Logro Clave 1: Pipeline de Datos Psicométricos con Python">Key Achievement 1: Psychometric Data Pipeline with Python</b></p>
+      <p><b data-en="Action:" data-es="Acción:">Action:</b> <span data-en="Used <b>Python to normalize student lists</b> and conducted a <b>census to obtain exact student counts</b> per school. Collected informed consent and applied questionnaires to measure <b>satisfaction, procrastination, and motivation</b>" data-es="Usé <b>Python para normalizar listas de estudiantes</b> y realicé un <b>censo para obtener el conteo exacto de estudiantes</b> por escuela. Recolecté consentimientos informados y apliqué cuestionarios para medir <b>satisfacción, procrastinación y motivación</b>">Used <b>Python to normalize student lists</b> and conducted a <b>census to obtain exact student counts</b> per school. Collected informed consent and applied questionnaires to measure <b>satisfaction, procrastination, and motivation</b></span></p>
+      <p><b data-en="Analysis:" data-es="Análisis:">Analysis:</b> <span data-en="Performed <b>Exploratory Factor Analysis</b> and <b>Confirmatory Factor Analysis</b>. Built a <b>linear regression model</b> using created indices to <b>predict student satisfaction</b>" data-es="Realicé <b>Análisis Factorial Exploratorio</b> y <b>Análisis Factorial Confirmatorio</b>. Construí un <b>modelo de regresión lineal</b> usando índices creados para <b>predecir la satisfacción estudiantil</b>">Performed <b>Exploratory Factor Analysis</b> and <b>Confirmatory Factor Analysis</b>. Built a <b>linear regression model</b> using created indices to <b>predict student satisfaction</b></span></p>
+      
+      <p><b data-en="Key Achievement 2: Automated PDF Report Generation" data-es="Logro Clave 2: Generación Automatizada de Reportes PDF">Key Achievement 2: Automated PDF Report Generation</b></p>
+      <p><b data-en="Action:" data-es="Acción:">Action:</b> <span data-en="Developed an <b>automated pipeline to generate PDF lists for each school</b> including student and parent/guardian information" data-es="Desarrollé un <b>pipeline automatizado para generar listas en PDF por cada escuela</b> incluyendo información de estudiante y padre/madre de familia">Developed an <b>automated pipeline to generate PDF lists for each school</b> including student and parent/guardian information</span></p>
+      <p><b data-en="Result:" data-es="Resultado:">Result:</b> <span data-en="Streamlined administrative reporting and provided clean, accessible data for school management" data-es="Estandaricé los reportes administrativos y brindé datos limpios y accesibles para la gestión escolar">Streamlined administrative reporting and provided clean, accessible data for school management</span></p>
+      
+      <p class="fun-fact"><b data-en="Fun fact:" data-es="Dato curioso:">Fun fact:</b> <span data-en="Played classical guitar at SINEM 🎸" data-es="Tocaba guitarra clásica en SINEM 🎸">Played classical guitar at SINEM 🎸</span></p>
     </div>
 
   </div>
+
+  <!-- Language Toggle + Force video to loop -->
+  <script>
+    let currentLang = 'en';
+    function toggleLanguage() {
+      currentLang = currentLang === 'en' ? 'es' : 'en';
+      document.querySelectorAll('[data-en]').forEach(el => {
+        el.innerHTML = el.getAttribute(`data-${currentLang}`);
+      });
+      document.querySelector('.lang-toggle').innerText = currentLang === 'en' ? 'ES' : 'EN';
+      document.documentElement.lang = currentLang;
+    }
+
+    const video = document.getElementById('bg-video');
+    video.addEventListener('ended', function() {
+      this.currentTime = 0;
+      this.play();
+    });
+  </script>
+
 </body>
 </html>
