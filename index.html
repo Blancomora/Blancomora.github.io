@@ -6,23 +6,30 @@
     <title>Angelica Blanco Mora - Data Engineer | FinOps & AI Analytics</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #fff; line-height: 1.6; }
-       .video-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -2; overflow: hidden; background: #0a0a0a url('bg-city.gif') no-repeat center/cover; }
-       .video-bg video { position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; transform: translate(-50%, -50%); object-fit: cover; }
-       .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); z-index: -1; }
-      .lang-switch { position: fixed; top: 20px; right: 20px; z-index: 10; background: rgba(0, 212, 255, 0.9); color: #000; border: none; padding: 10px 18px; border-radius: 20px; font-weight: 700; cursor: pointer; }
-      .nav { position: fixed; top: 0; width: 100%; background: rgba(0,0,0,0.8); padding: 15px; z-index: 9; display: flex; justify-content: center; gap: 20px; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #eee; line-height: 1.7; background: #0a0a0a; }
+
+        /* VIDEO BACKGROUND */
+      .video-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -2; overflow: hidden; background: #0a0a0a url('bg-city.gif') center/cover no-repeat; }
+      .video-bg video { position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; transform: translate(-50%, -50%); object-fit: cover; }
+      .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.75); z-index: -1; }
+
+      .lang-switch { position: fixed; top: 20px; right: 20px; z-index: 10; background: #00d4ff; color: #000; border: none; padding: 10px 18px; border-radius: 20px; font-weight: 700; cursor: pointer; }
+      .nav { position: sticky; top: 0; width: 100%; background: rgba(0,0,0,0.9); padding: 15px; z-index: 9; display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; }
       .nav a { color: #00d4ff; text-decoration: none; font-weight: 600; }
-        header, section { position: relative; z-index: 1; padding: 80px 20px; max-width: 1100px; margin: 0 auto; }
-        header { text-align: center; padding-top: 140px; }
-        h1 { font-size: 3rem; } h2 { font-size: 1.5rem; color: #00d4ff; }
-        h3 { font-size: 2rem; margin-bottom: 30px; border-bottom: 2px solid #00d4ff; padding-bottom: 10px; }
-       .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-       .card { background: rgba(20, 20, 20, 0.85); padding: 25px; border-radius: 10px; border-left: 4px solid #00d4ff; backdrop-filter: blur(5px); }
-       .skills-grid { display: flex; flex-wrap: wrap; gap: 10px; }
-       .skill-tag { background: #00d4ff; color: #000; padding: 8px 15px; border-radius: 20px; font-weight: 700; font-size: 0.9rem; }
+
+       .container { position: relative; z-index: 1; max-width: 950px; margin: 0 auto; padding: 60px 30px; }
+        header { text-align: center; padding: 40px 0 60px 0; }
+        h1 { font-size: 3rem; margin-bottom: 10px; }
+        h2 { font-size: 1.4rem; color: #00d4ff; margin-bottom: 25px; }
+        h3 { font-size: 1.9rem; margin: 50px 0 20px 0; border-bottom: 2px solid #00d4ff; padding-bottom: 10px; }
+        h4 { font-size: 1.3rem; color: #00d4ff; margin: 25px 0 10px 0; }
+        p { margin-bottom: 15px; }
+        ul { margin-left: 25px; margin-bottom: 15px; }
+       .card { background: rgba(25, 25, 25, 0.9); padding: 30px; margin-bottom: 25px; border-radius: 8px; border-left: 4px solid #00d4ff; }
+       .skills-grid { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
+      .skill-tag { background: rgba(0, 212, 255, 0.15); border: 1px solid #00d4ff; color: #00d4ff; padding: 8px 15px; border-radius: 20px; font-weight: 600; font-size: 0.9rem; }
         [lang="es"] { display: none; }
-        @media (max-width: 768px) {.video-bg video { display: none; }.nav { flex-wrap: wrap; } }
+        @media (max-width: 768px) {.video-bg video { display: none; } h1{font-size:2.2rem}}
     </style>
 </head>
 <body>
@@ -35,57 +42,91 @@
         <a href="#research" data-en="Research" data-es="Investigación">Research</a>
     </nav>
 
-    <div class="video-bg"><video autoplay muted loop playsinline poster="bg-city.gif"><source src="bg-city.mp4" type="video/mp4"></video></div>
+    <div class="video-bg">
+        <video autoplay muted loop playsinline poster="bg-city.gif">
+            <source src="bg-city.mp4" type="video/mp4">
+        </video>
+    </div>
     <div class="overlay"></div>
 
+    <div class="container">
     <!-- ENGLISH -->
     <div lang="en">
         <header>
             <h1>Angelica Blanco Mora</h1>
-            <h2>Data Engineer | FinOps & AI Analytics | Psychometrics</h2>
-            <p>5+ years turning manual, fragile processes into automated, scalable systems. I optimize code to load 3x faster and build pipelines that prevent data quality issues at the source.</p>
+            <h2>Statistician | Data Engineer | FinOps & AI Analytics | Psychometrics | Ethical AI</h2>
+            <p>Passionate about <strong>dimensionality reduction through factor analysis</strong> in psychometric data and building pipelines that prevent <strong>data quality issues at the source</strong>.</p>
+            <p>I love <strong>logical and ambiguous problems</strong> where I can optimize and refactor code to make it load 3x faster.</p>
+            <p>Statistician with <strong>5+ years of experience</strong> building automated data pipelines, scalable models, and self-service BI to solve complex business problems.</p>
+            <p>I specialize in turning manual, fragile processes into automated, scalable systems using <strong>SQL, Power BI, Power Automate, Python, and PySpark</strong>.</p>
         </header>
 
         <section id="skills">
-            <h3>Technical Arsenal</h3>
+            <h3>Core Skills</h3>
             <div class="skills-grid">
                 <span class="skill-tag">Python</span><span class="skill-tag">SQL</span><span class="skill-tag">PySpark</span>
-                <span class="skill-tag">Power BI + DAX</span><span class="skill-tag">Power Automate</span><span class="skill-tag">Alteryx</span>
-                <span class="skill-tag">ETL</span><span class="skill-tag">Data Modeling</span><span class="skill-tag">API Integration</span>
-                <span class="skill-tag">BigQuery</span><span class="skill-tag">Anomaly Detection</span><span class="skill-tag">Forecasting</span>
-                <span class="skill-tag">EFA / CFA</span><span class="skill-tag">Experimental Design</span><span class="skill-tag">Git</span>
+                <span class="skill-tag">NumPy</span><span class="skill-tag">pandas</span><span class="skill-tag">scikit-learn</span>
+                <span class="skill-tag">XGBoost</span><span class="skill-tag">Power BI</span><span class="skill-tag">Power Automate</span>
+                <span class="skill-tag">Alteryx</span><span class="skill-tag">ETL</span><span class="skill-tag">Data Modeling</span>
+                <span class="skill-tag">Anomaly Detection</span><span class="skill-tag">Report Automation</span><span class="skill-tag">BigQuery</span>
+                <span class="skill-tag">Psychometrics</span><span class="skill-tag">EFA</span><span class="skill-tag">CFA</span>
+                <span class="skill-tag">Experimental Design</span><span class="skill-tag">Statistical Modeling</span>
             </div>
         </section>
 
         <section id="experience">
-            <h3>Experience & Impact</h3>
+            <h3>Key Work Experience Achievements</h3>
             <div class="card">
-                <h4>Delbridge / Vena | Expert System Services Consultant</h4>
-                <p><strong>Custom Workforce Cost Model - Canada</strong></p>
-                <p>Built financial model with business logic for taxes/benefits across 10 provinces. Reduced labor cost projection time. Tool adopted by HR for budgeting and chargeback.</p>
+                <h4>Moody's - Data Analyst</h4>
+                <p><strong>Key Achievement: Migration Automation with Power Automate + Power Apps</strong></p>
+                <p><strong>Situation:</strong> Users without OneStream licenses lost access to financial reports during Hyperion to OneStream migration</p>
+                <p><strong>Action:</strong> Built a Power Automate flow + Power Apps to automatically identify, track, and categorize 300+ files in SharePoint</p>
+                <p><strong>Result:</strong> Reduced file retrieval time by 90% and enabled delivery of Power BI reports for 300+ files</p>
             </div>
             <div class="card">
-                <h4>Moody's | Data Analyst</h4>
-                <p><strong>Financial Reporting Automation</strong></p>
-                <p>Power Automate + Power Apps to track 300+ files. Reduced retrieval time 90%. Migrated Alteryx ETL to SQL Dataflows. Cut transformation effort 60%.</p>
+                <h4>Moody's - Data Analyst Intern</h4>
+                <p><strong>Key Achievement: ETL Process Migration + Power BI IP</strong></p>
+                <p><strong>Situation:</strong> Manual ETL process in Alteryx with no API available</p>
+                <p><strong>Action:</strong> Migrated to SQL Dataflows in Power BI Service and documented Power BI best practices</p>
+                <p><strong>Result:</strong> Decreased data transformation effort by 60% and left behind IP: a Power BI best practices guide</p>
+            </div>
+            <div class="card">
+                <h4>Delbridge - Expert System Services Consultant</h4>
+                <p><strong>Key Achievement: Custom Workforce Model for Canada</strong></p>
+                <p><strong>Situation:</strong> No standardized system to calculate employee benefits across 10 Canadian provinces</p>
+                <p><strong>Action:</strong> Designed a custom workforce model with business logic for taxes and benefits</p>
+                <p><strong>Result:</strong> Reduced labor cost projection time and delivered tool adopted by HR team</p>
+            </div>
+            <div class="card">
+                <h4>United Nations - MIDEPLAN</h4>
+                <p><strong>Key Achievement: Interactive SDG Dashboard</strong></p>
+                <p><strong>Action:</strong> Built ETL in Power Query with MySQL connection and developed a multi-page Power BI Dashboard</p>
+                <p><strong>Features:</strong> Buttons, bookmarks, dropdown filters, custom visuals, and variable normalization for SDG tracking</p>
+                <p><strong>Result:</strong> Delivered interactive tool for monitoring Sustainable Development Goals</p>
             </div>
         </section>
 
         <section id="projects">
-            <h3>Featured Projects</h3>
-            <div class="grid">
-                <div class="card">
-                    <h4>AI Spend Tracker [Concept]</h4>
-                    <p>Simulated pipeline to ingest OpenAI/Claude/Gemini billing APIs → BigQuery → Power BI. Dimensional model for cost allocation by team/project. Anomaly detection for spend spikes.</p>
-                </div>
-                <div class="card">
-                    <h4>UN - MIDEPLAN | SDG Dashboard</h4>
-                    <p>ETL in Power Query + MySQL. Multi-page Power BI with buttons, bookmarks, dropdowns. Normalized variables to monitor Sustainable Development Goals.</p>
-                </div>
-                <div class="card">
-                    <h4>SINEM | Psychometric Data Pipeline</h4>
-                    <p>Python pipeline to normalize student census. EFA + CFA + Linear Regression to predict satisfaction. Automated PDF report generation for 100+ schools.</p>
-                </div>
+            <h3>Featured Project: Graduation & Professional Practice</h3>
+            <div class="card">
+                <h4>SINEM - National System of Music Education</h4>
+                <p><strong>Key Achievement 1: Psychometric Data Pipeline with Python</strong></p>
+                <p>Used Python to normalize student lists and conducted a census to obtain exact student counts per school. Collected informed consent and applied questionnaires to measure satisfaction, procrastination, and motivation.</p>
+                <p>Performed Exploratory Factor Analysis and Confirmatory Factor Analysis. Built a linear regression model using created indices to predict student satisfaction.</p>
+                <p><strong>Key Achievement 2: Automated PDF Report Generation</strong></p>
+                <p>Developed an automated pipeline to generate PDF lists for each school including student and parent/guardian information. Streamlined administrative reporting.</p>
+            </div>
+        </section>
+
+        <section id="research">
+            <h3>Academic & Research Projects</h3>
+            <div class="card">
+                <h4>School of Statistics - Quasi-Experimental Design</h4>
+                <p>Measuring working memory, short-term memory, and attention. Design Variables: Music noise levels, time of day when test was conducted. Designed and implemented a quasi-experimental study to analyze cognitive performance.</p>
+            </div>
+            <div class="card">
+                <h4>School of Statistics - Big Five Research</h4>
+                <p>Correlation analysis between Big Five personality traits, logical reasoning, admission score, and GPA. Variables: Anxiety, fear of negative evaluation, health factors like exercise, and wellbeing factors like stable employment.</p>
             </div>
         </section>
     </div>
@@ -94,52 +135,44 @@
     <div lang="es">
         <header>
             <h1>Angelica Blanco Mora</h1>
-            <h2>Ingeniera de Datos | FinOps & Analítica de IA | Psicometría</h2>
-            <p>Más de 5 años transformando procesos manuales y frágiles en sistemas automatizados y escalables. Optimizo código para que cargue 3x más rápido y construyo pipelines que previenen problemas de calidad desde el origen.</p>
+            <h2>Estadística | Ingeniera de Datos | FinOps & Analítica de IA | Psicometría | IA Ética</h2>
+            <p>Apasionada por la <strong>reducción de dimensionalidad a través del análisis factorial</strong> en datos psicométricos y por construir pipelines que previenen <strong>problemas de calidad de datos desde el origen</strong>.</p>
+            <p>Amo los <strong>problemas lógicos y ambiguos</strong> donde puedo optimizar y refactorizar código para que cargue 3 veces más rápido.</p>
+            <p>Estadística con <strong>más de 5 años de experiencia</strong> construyendo pipelines de datos automatizados, modelos escalables y BI de autoservicio para resolver problemas de negocio complejos.</p>
+            <p>Me especializo en transformar procesos manuales y frágiles en sistemas automatizados y escalables usando <strong>SQL, Power BI, Power Automate, Python y PySpark</strong>.</p>
         </header>
 
         <section id="skills">
-            <h3>Arsenal Técnico</h3>
+            <h3>Habilidades Clave</h3>
             <div class="skills-grid">
                 <span class="skill-tag">Python</span><span class="skill-tag">SQL</span><span class="skill-tag">PySpark</span>
-                <span class="skill-tag">Power BI + DAX</span><span class="skill-tag">Power Automate</span><span class="skill-tag">Alteryx</span>
-                <span class="skill-tag">ETL</span><span class="skill-tag">Modelado de Datos</span><span class="skill-tag">Integración API</span>
-                <span class="skill-tag">BigQuery</span><span class="skill-tag">Detección de Anomalías</span><span class="skill-tag">Forecasting</span>
-                <span class="skill-tag">AFE / AFC</span><span class="skill-tag">Diseño Experimental</span><span class="skill-tag">Git</span>
+                <span class="skill-tag">NumPy</span><span class="skill-tag">pandas</span><span class="skill-tag">scikit-learn</span>
+                <span class="skill-tag">XGBoost</span><span class="skill-tag">Power BI</span><span class="skill-tag">Power Automate</span>
+                <span class="skill-tag">Alteryx</span><span class="skill-tag">ETL</span><span class="skill-tag">Modelado de Datos</span>
+                <span class="skill-tag">Detección de Anomalías</span><span class="skill-tag">Automatización de Reportes</span><span class="skill-tag">BigQuery</span>
+                <span class="skill-tag">Psicometría</span><span class="skill-tag">AFE</span><span class="skill-tag">AFC</span>
+                <span class="skill-tag">Diseño Experimental</span><span class="skill-tag">Modelado Estadístico</span>
             </div>
         </section>
 
         <section id="experience">
-            <h3>Experiencia e Impacto</h3>
+            <h3>Logros Clave de Experiencia Profesional</h3>
             <div class="card">
-                <h4>Delbridge / Vena | Consultora de Sistemas Expertos</h4>
-                <p><strong>Modelo de Costos de Fuerza Laboral - Canadá</strong></p>
-                <p>Construí modelo financiero con lógica para impuestos/beneficios en 10 provincias. Reduje tiempo de proyección. Herramienta adoptada por RRHH para presupuesto y asignación de costos.</p>
+                <h4>Moody's - Analista de Datos</h4>
+                <p><strong>Logro Clave: Automatización de Migración con Power Automate + Power Apps</strong></p>
+                <p><strong>Situación:</strong> Usuarios sin licencias de OneStream perdieron acceso a reportes financieros durante migración de Hyperion a OneStream</p>
+                <p><strong>Acción:</strong> Construí flujo de Power Automate + Power Apps para identificar, rastrear y categorizar 300+ archivos en SharePoint</p>
+                <p><strong>Resultado:</strong> Reduje tiempo de recuperación de archivos en 90% y habilité entrega de reportes de Power BI para 300+ archivos</p>
             </div>
-            <div class="card">
-                <h4>Moody's | Analista de Datos</h4>
-                <p><strong>Automatización de Reportes Financieros</strong></p>
-                <p>Power Automate + Power Apps para rastrear 300+ archivos. Reduje tiempo de recuperación 90%. Migré ETL de Alteryx a SQL Dataflows. Reduje esfuerzo 60%.</p>
+             <div class="card">
+                <h4>Delbridge - Consultora de Sistemas Expertos</h4>
+                <p><strong>Logro Clave: Modelo de Fuerza Laboral Personalizado para Canadá</strong></p>
+                <p><strong>Situación:</strong> No existía sistema estandarizado para calcular beneficios de empleados en 10 provincias canadienses</p>
+                <p><strong>Acción:</strong> Diseñé modelo de fuerza laboral con lógica de negocio para impuestos y beneficios</p>
+                <p><strong>Resultado:</strong> Reduje tiempo de proyección de costos laborales y entregué herramienta adoptada por RRHH</p>
             </div>
         </section>
-
-        <section id="projects">
-            <h3>Proyectos Destacados</h3>
-            <div class="grid">
-                <div class="card">
-                    <h4>AI Spend Tracker [Concepto]</h4>
-                    <p>Pipeline simulado para consumir APIs de facturación de OpenAI/Claude/Gemini → BigQuery → Power BI. Modelo dimensional para asignación de costos. Detección de anomalías.</p>
-                </div>
-                <div class="card">
-                    <h4>ONU - MIDEPLAN | Dashboard ODS</h4>
-                    <p>ETL en Power Query + MySQL. Power BI multipágina con botones y filtros. Variables normalizadas para monitoreo de Objetivos de Desarrollo Sostenible.</p>
-                </div>
-                <div class="card">
-                    <h4>SINEM | Pipeline Psicométrico</h4>
-                    <p>Pipeline en Python para normalizar censo estudiantil. AFE + AFC + Regresión Lineal para predecir satisfacción. Generación automática de PDFs para 100+ escuelas.</p>
-                </div>
-            </div>
-        </section>
+    </div>
     </div>
 
     <script>
