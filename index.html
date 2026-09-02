@@ -1,154 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Angelica Blanco Mora | Statistician & Data Science</title>
-  <style>
-    html, body { height: 100%; margin: 0; padding: 0; background: #000; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; }
-    
-    #bg-video { 
-      position: fixed; 
-      top: 0; 
-      left: 0; 
-      width: 100%; 
-      height: 100%; 
-      z-index: -1; 
-      object-fit: cover;
-      filter: brightness(0.4) blur(2px); /* dark + blur like screenshot */
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angelica Blanco Mora - Data Engineer | FinOps & AI Analytics</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #fff; line-height: 1.6; position: relative; }
 
-    .lang-toggle { 
-      position: fixed; 
-      top: env(safe-area-inset-top, 15px); 
-      right: 15px; 
-      z-index: 10; 
-      background: rgba(0,0,0,0.6); 
-      border: 1px solid rgba(255,255,255,0.2); 
-      padding: 6px 14px; 
-      border-radius: 20px; 
-      color: white; 
-      cursor: pointer; 
-      font-size: 0.85em; 
-      backdrop-filter: blur(10px); 
-      font-weight: 600;
-    }
-    .lang-toggle:hover { background: rgba(255,255,255,0.15); }
+        /* VIDEO BACKGROUND */
+       .video-bg {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -2;
+            overflow: hidden; background: #0a0a0a url('bg-city.gif') no-repeat center/cover;
+        }
+       .video-bg video {
+            position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%;
+            width: auto; height: auto; transform: translate(-50%, -50%); object-fit: cover;
+        }
+       .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.65); z-index: -1; }
 
-    .content { 
-      background: transparent;
-      padding: 80px 20px 60px 20px; /* top padding for notch + ES button */
-      min-height: 100%; 
-      max-width: 100%; 
-      margin: 0 auto; 
-      position: relative; 
-      z-index: 1; 
-      box-sizing: border-box;
-    }
+        /* LANG BUTTON */
+       .lang-switch {
+            position: fixed; top: 20px; right: 20px; z-index: 10;
+            background: rgba(0, 212, 255, 0.9); color: #000; border: none;
+            padding: 10px 18px; border-radius: 20px; font-weight: 700; cursor: pointer;
+        }
+       .lang-switch:hover { background: #00d4ff; }
 
-    h1 { color: white; font-size: 2em; margin-bottom: 5px; text-align: left; font-weight: 700; letter-spacing: -0.5px; }
-    .subtitle { font-size: 1em; color: rgba(255,255,255,0.8); margin-bottom: 25px; text-align: left; line-height: 1.4; }
-    .bio, p { font-size: 0.95em; color: rgba(255,255,255,0.9); margin-bottom: 15px; line-height: 1.6; }
-    strong, b { color: white; font-weight: 600; }
-    
-    h2 { 
-      color: white; 
-      font-size: 1.4em;
-      border-bottom: 1px solid rgba(255,255,255,0.2); 
-      padding-bottom: 8px; 
-      margin-top: 35px; 
-      margin-bottom: 20px;
-      font-weight: 600; 
-    }
-    h3 { color: white; font-weight: 600; margin: 0 0 10px 0; font-size: 1.1em; }
+        header, section, footer { position: relative; z-index: 1; padding: 60px 20px; max-width: 1000px; margin: 0 auto; }
+        header { text-align: center; padding-top: 120px; }
+        h1 { font-size: 2.8rem; margin-bottom: 10px; }
+        h2 { font-size: 1.4rem; color: #00d4ff; margin-bottom: 20px; }
+        h3 { font-size: 1.8rem; margin-bottom: 20px; border-bottom: 2px solid #00d4ff; padding-bottom: 10px; }
+        h4 { font-size: 1.2rem; color: #00d4ff; margin-bottom: 8px; }
+       .contact a { color: #00d4ff; text-decoration: none; margin: 0 10px; font-weight: 600; }
+       .job,.project { background: rgba(20, 20, 20, 0.8); padding: 25px; margin-bottom: 25px; border-radius: 10px; border-left: 4px solid #00d4ff; backdrop-filter: blur(5px); }
 
-    .logro, .logro-destacado { 
-      background: rgba(0,0,0,0.5); /* glass card effect */
-      border: 1px solid rgba(255,255,255,0.1);
-      padding: 18px; 
-      margin: 18px 0; 
-      border-radius: 12px; 
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-    }
-    .logro-destacado { 
-      background: rgba(0,0,0,0.6);
-      border-left: 3px solid rgba(255,255,255,0.8);
-    }
+        [lang="es"] { display: none; } /* Por defecto oculto */
 
-    .tag { 
-      display: inline-block; 
-      background: rgba(255,255,255,0.12); 
-      padding: 4px 10px; 
-      border-radius: 15px; 
-      font-size: 0.75em; 
-      margin: 4px 6px 10px 0; 
-      color: rgba(255,255,255,0.9);
-    }
-    .fun-fact { font-size: 0.9em; color: rgba(255,255,255,0.7); font-style: italic; margin-top: 10px; }
-    .contact { text-align: center; margin-top: 40px; padding-bottom: 40px; }
-    .contact a { color: white; text-decoration: none; margin: 0 10px; border-bottom: 1px solid rgba(255,255,255,0.3); }
-    .contact a:hover { border-bottom-color: white; }
-
-    /* Desktop */
-    @media (min-width: 769px) {
-      .content { max-width: 900px; padding: 60px 40px; }
-      h1 { font-size: 2.8em; text-align: center; }
-      .subtitle { text-align: center; font-size: 1.2em; }
-      .bio, p { font-size: 1em; }
-    }
-  </style>
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; } h2 { font-size: 1.1rem; }
+            header, section, footer { padding: 40px 15px; }
+           .video-bg video { display: none; }
+        }
+    </style>
 </head>
 <body>
-  <button class="lang-toggle" onclick="toggleLanguage()">ES</button>
-  
-  <video autoplay muted loop playsinline id="bg-video">
-    <source src="bg-city.mp4" type="video/mp4">
-  </video>
 
-  <div class="content">
-    <h1 data-en="Angelica Blanco Mora" data-es="Angelica Blanco Mora">Angelica Blanco Mora</h1>
-    <p class="subtitle" data-en="Statistician | Data Science | Psychometrics | Ethical AI" data-es="Estadística | Ingeniera de Datos | Psicometría | IA Ética">Statistician | Data Science | Psychometrics | Ethical AI</p>
-    
-    <p class="bio" data-en="Passionate about <strong>dimensionality reduction through factor analysis</strong> in psychometric data and building pipelines that prevent <strong>data quality issues at the source</strong>." 
-       data-es="Apasionada por la <strong>reducción de dimensionalidad a través de análisis factorial</strong> en datos psicométricos y la construcción de pipelines que previenen <strong>problemas de calidad de datos desde el origen</strong>.">Passionate about <strong>dimensionality reduction through factor analysis</strong> in psychometric data and building pipelines that prevent <strong>data quality issues at the source</strong>.</p>
-    
-    <p class="bio" data-en="I love <strong>logical and ambiguous problems</strong> where I can optimize and refactor code to make it load 3x faster."
-       data-es="Me encantan los <strong>problemas lógicos y ambiguos</strong> donde puedo optimizar y refactorizar código para que cargue 3 veces más rápido.">I love <strong>logical and ambiguous problems</strong> where I can optimize and refactor code to make it load 3x faster.</p>
+    <button class="lang-switch" onclick="toggleLang()">ES / EN</button>
 
-    <p data-en="Statistician with <strong>5+ years of experience</strong> building automated data pipelines, scalable models, and self-service BI to solve complex business problems."
-       data-es="Estadística con <strong>más de 5 años de experiencia</strong> construyendo pipelines de datos automatizados, modelos escalables y BI de autoservicio para resolver problemas de negocio complejos.">Statistician with <strong>5+ years of experience</strong> building automated data pipelines, scalable models, and self-service BI to solve complex business problems.</p>
-    
-    <p data-en="I specialize in turning manual, fragile processes into automated, scalable systems using <strong>SQL, Power BI, Power Automate, Python, and PySpark</strong>."
-       data-es="Me especializo en transformar procesos manuales y frágiles en sistemas automatizados y escalables usando <strong>SQL, Power BI, Power Automate, Python y PySpark</strong>.">I specialize in turning manual, fragile processes into automated, scalable systems using <strong>SQL, Power BI, Power Automate, Python, and PySpark</strong>.</p>
-    
-    <p><b data-en="Core Skills:" data-es="Habilidades Clave:">Core Skills:</b> Python, SQL, PySpark, NumPy, pandas, scikit-learn, XGBoost, Power BI, Power Automate, Alteryx, ETL, Data Modeling, Anomaly Detection, Psychometrics, Experimental Design, Factor Analysis, EFA, CFA, Statistical Modeling, Report Automation</p>
+    <!-- VIDEO BACKGROUND -->
+    <div class="video-bg">
+        <video autoplay muted loop playsinline poster="bg-city.gif">
+            <source src="bg-city.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="overlay"></div>
 
-    <h2 data-en="Key Work Experience Achievements" data-es="Logros de Experiencia Profesional">Key Work Experience Achievements</h2>
+    <!-- ENGLISH VERSION -->
+    <div lang="en">
+        <header>
+            <h1>Angelica Blanco Mora</h1>
+            <h2>Data Engineer | FinOps & AI Analytics | Psychometrics</h2>
+            <p>I build automated data pipelines that turn messy, manual processes into scalable systems. Passionate about data quality, cost optimization, and making code load 3x faster.</p>
+            <div class="contact">
+                <a href="mailto:angeblanco1701@gmail.com">Email</a> |
+                <a href="https://linkedin.com">LinkedIn</a> |
+                <a href="https://github.com">GitHub</a>
+            </div>
+        </header>
 
-    <div class="logro">
-      <h3>Moody's - Data Analyst</h3>
-      <p><b data-en="Key Achievement: Migration Automation with Power Automate + Power Apps" data-es="Logro Clave: Automatización de Migración con Power Automate + Power Apps">Key Achievement: Migration Automation with Power Automate + Power Apps</b></p>
-      <p><b data-en="Situation:" data-es="Situación:">Situation:</b> <span data-en="Users without OneStream licenses lost access to financial reports during Hyperion to OneStream migration" data-es="Usuarios sin licencias de OneStream perdieron acceso a reportes financieros durante la migración de Hyperion a OneStream">Users without OneStream licenses lost access to financial reports during Hyperion to OneStream migration</span></p>
-      <p><b data-en="Action:" data-es="Acción:">Action:</b> <span data-en="Built a <b>Power Automate flow + Power Apps</b> to automatically identify, track, and categorize <b>300+ files in SharePoint</b>" data-es="Desarrollé un <b>flujo de Power Automate + Power Apps</b> para identificar, rastrear y categorizar automáticamente <b>más de 300 archivos en SharePoint</b>">Built a <b>Power Automate flow + Power Apps</b> to automatically identify, track, and categorize <b>300+ files in SharePoint</b></span></p>
-      <p><b data-en="Result:" data-es="Resultado:">Result:</b> <span data-en="<b>Reduced file retrieval time by 90%</b> and enabled delivery of Power BI reports for 300+ files" data-es="<b>Reduje el tiempo de recuperación de archivos en 90%</b> y habilité la entrega de reportes de Power BI para más de 300 archivos"><b>Reduced file retrieval time by 90%</b> and enabled delivery of Power BI reports for 300+ files</span></p>
+        <section id="about">
+            <h3>About Me</h3>
+            <p>Statistician with <strong>5+ years of experience</strong> building automated data pipelines, scalable models, and self-service BI to solve complex business problems.</p>
+            <p>I specialize in turning manual, fragile processes into automated, scalable systems using <strong>SQL, Power BI, Power Automate, Python, and PySpark</strong>. Passionate about <strong>dimensionality reduction through factor analysis</strong> and building pipelines that prevent <strong>data quality issues at the source</strong>.</p>
+        </section>
+
+        <section id="experience">
+            <h3>Key Work Experience</h3>
+            <div class="job">
+                <h4>Expert System Services Consultant | Delbridge Solutions / Vena Solutions</h4>
+                <p><strong>Key Achievement: Custom Workforce Model for Canada</strong></p>
+                <p><strong>Situation:</strong> No standardized system to calculate employee benefits across 10 Canadian provinces</p>
+                <p><strong>Action:</strong> Designed a custom workforce model with business logic for taxes and benefits</p>
+                <p><strong>Result:</strong> Reduced labor cost projection time and delivered tool adopted by HR team</p>
+            </div>
+            <div class="job">
+                <h4>Data Analyst | Moody's Shared Services</h4>
+                <p><strong>Key Achievement: Migration Automation with Power Automate + Power Apps</strong></p>
+                <p><strong>Situation:</strong> Users without OneStream licenses lost access to financial reports during Hyperion to OneStream migration</p>
+                <p><strong>Action:</strong> Built a <strong>Power Automate flow + Power Apps</strong> to automatically identify, track, and categorize <strong>300+ files in SharePoint</strong></p>
+                <p><strong>Result:</strong> <strong>Reduced file retrieval time by 90%</strong> and enabled delivery of Power BI reports for 300+ files</p>
+            </div>
+        </section>
     </div>
 
-    <div class="logro">
-      <h3>Moody's - Data Analyst Intern</h3>
-      <p><b data-en="Key Achievement: ETL Process Migration + Power BI IP" data-es="Logro Clave: Migración de Proceso ETL + IP de Power BI">Key Achievement: ETL Process Migration + Power BI IP</b></p>
-      <p><b data-en="Situation:" data-es="Situación:">Situation:</b> <span data-en="Manual ETL process in Alteryx with no API available" data-es="Proceso ETL manual en Alteryx sin API disponible">Manual ETL process in Alteryx with no API available</span></p>
-      <p><b data-en="Action:" data-es="Acción:">Action:</b> <span data-en="Migrated to <b>SQL Dataflows in Power BI Service</b> and documented <b>Power BI best practices</b>" data-es="Migré a <b>SQL Dataflows en Power BI Service</b> y documenté <b>mejores prácticas de Power BI</b>">Migrated to <b>SQL Dataflows in Power BI Service</b> and documented <b>Power BI best practices</b></span></p>
-      <p><b data-en="Result:" data-es="Resultado:">Result:</b> <span data-en="<b>Decreased data transformation effort by 60%</b> and left behind IP: a Power BI best practices guide" data-es="<b>Reduje el esfuerzo de transformación de datos en 60%</b> y dejé como IP: una guía de mejores prácticas de Power BI"><b>Decreased data transformation effort by 60%</b> and left behind IP: a Power BI best practices guide</span></p>
+    <!-- SPANISH VERSION -->
+    <div lang="es">
+        <header>
+            <h1>Angelica Blanco Mora</h1>
+            <h2>Ingeniera de Datos | FinOps & Analítica de IA | Psicometría</h2>
+            <p>Construyo pipelines de datos automatizados que convierten procesos manuales y frágiles en sistemas escalables. Apasionada por la calidad de datos, optimización de costos y hacer que el código cargue 3x más rápido.</p>
+            <div class="contact">
+                <a href="mailto:angeblanco1701@gmail.com">Correo</a> |
+                <a href="https://linkedin.com">LinkedIn</a> |
+                <a href="https://github.com">GitHub</a>
+            </div>
+        </header>
+
+        <section id="about">
+            <h3>Sobre Mí</h3>
+            <p>Estadística con <strong>más de 5 años de experiencia</strong> construyendo pipelines de datos automatizados, modelos escalables y BI de autoservicio para resolver problemas de negocio complejos.</p>
+            <p>Me especializo en transformar procesos manuales en sistemas automatizados usando <strong>SQL, Power BI, Power Automate, Python y PySpark</strong>. Apasionada por la <strong>reducción de dimensionalidad a través de análisis factorial</strong> y por construir pipelines que previenen <strong>problemas de calidad de datos desde el origen</strong>.</p>
+        </section>
+
+        <section id="experience">
+            <h3>Experiencia Profesional Clave</h3>
+            <div class="job">
+                <h4>Consultora de Sistemas Expertos | Delbridge Solutions / Vena Solutions</h4>
+                <p><strong>Logro Clave: Modelo de Fuerza Laboral Personalizado para Canadá</strong></p>
+                <p><strong>Situación:</strong> No existía un sistema estandarizado para calcular beneficios de empleados en 10 provincias canadienses</p>
+                <p><strong>Acción:</strong> Diseñé un modelo de fuerza laboral personalizado con lógica de negocio para impuestos y beneficios</p>
+                <p><strong>Resultado:</strong> Reduje el tiempo de proyección de costos laborales y entregué una herramienta adoptada por el equipo de RRHH</p>
+            </div>
+            <div class="job">
+                <h4>Analista de Datos | Moody's Shared Services</h4>
+                <p><strong>Logro Clave: Automatización de Migración con Power Automate + Power Apps</strong></p>
+                <p><strong>Situación:</strong> Usuarios sin licencias de OneStream perdieron acceso a reportes financieros durante la migración de Hyperion a OneStream</p>
+                <p><strong>Acción:</strong> Construí un <strong>flujo de Power Automate + Power Apps</strong> para identificar, rastrear y categorizar <strong>más de 300 archivos en SharePoint</strong></p>
+                <p><strong>Resultado:</strong> <strong>Reduje el tiempo de recuperación de archivos en 90%</strong> y habilité la entrega de reportes de Power BI para más de 300 archivos</p>
+            </div>
+        </section>
     </div>
 
-    <div class="logro">
-      <h3>Delbridge - Expert System Services Consultant</h3>
-      <p><b data-en="Key Achievement: Custom Workforce Model for Canada" data-es="Logro Clave: Modelo de Fuerza Laboral Personalizado para Canadá">Key Achievement: Custom Workforce Model for Canada</b></p>
-      <p><b data-en="Situation:" data-es="Situación:">Situation:</b> <span data-en="No standardized system to calculate employee benefits across 10 Canadian provinces" data-es="No existía un sistema estandarizado para calcular beneficios de empleados en 10 provincias canadienses">No standardized system to calculate employee benefits across 10 Canadian provinces</span></p>
-      <p><b data-en="Action:" data-es="Acción:">Action:</b> <span data-en="Designed a <b>custom workforce model</b> with business logic for taxes and benefits" data-es="Diseñé un <b>modelo de fuerza laboral personalizado</b> con lógica de negocio para impuestos y beneficios">Designed a <b>custom workforce model</b> with business logic for taxes and benefits</span></p>
-      <p><b data-en="Result:" data-es="Resultado:">Result:</b> <span data-en="<b>Reduced labor cost projection time</b> and delivered tool adopted by HR team" data-es="<b>Reduje el tiempo de proyección de costos laborales</b> y entregué una herramienta adoptada por el equipo de RRHH"><b>Reduced labor cost projection time</b> and delivered tool adopted by HR team</span></p>
-    </div>
+    <footer>
+        <div lang="en"><p>Let's connect: angeblanco1701@gmail.com</p></div>
+        <div lang="es"><p>Conectemos: angeblanco1701@gmail.com</p></div>
+    </footer>
 
-    <div class="logro">
-      <h
+    <script>
+        function toggleLang() {
+            const en = document.querySelectorAll('[lang="en"]');
+            const es = document.querySelectorAll('[lang="es"]');
+            const isEnVisible = en[0].style.display!== 'none';
+
+            en.forEach(el => el.style.display = isEnVisible? 'none' : 'block');
+            es.forEach(el => el.style.display = isEnVisible? 'block' : 'none');
+        }
+        // Mostrar EN por defecto al cargar
+        document.querySelectorAll('[lang="en"]').forEach(el => el.style.display = 'block');
+    </script>
+</body>
+</html>
